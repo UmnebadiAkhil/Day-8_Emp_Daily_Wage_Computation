@@ -8,7 +8,7 @@ Console.WriteLine(" ____________________________________________________________
 bool flag = true;
 while (flag)
 {
-    Console.WriteLine("Enter the program number which is to be executed \n 1.UC-1, \n 2.UC-2, \n 3.UC-3, \n 4.UC-4, \n 5.UC-5, \n 6.UC-6, \n 7.UC-7, \n 8.Exit");
+    Console.WriteLine("Enter the program number which is to be executed \n 1.UC-1, \n 2.UC-2, \n 3.UC-3, \n 4.UC-4, \n 5.UC-5, \n 6.UC-6, \n 7.UC-7, \n 8.UC-8_MultipleCompanies, \n 9.Exit");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -38,8 +38,14 @@ while (flag)
             break;
         case 7:
             UC7_ReactorTheCode.computeEmpWage();
-            break ;
+            break;
         case 8:
+            ComputeEmpWageClass computeEmpWageClass = new ComputeEmpWageClass();
+            computeEmpWageClass.computeEmpWage("Dmart", 20, 20, 100);
+
+            computeEmpWageClass.computeEmpWage("Reliance", 25, 20, 100);
+            break;
+        case 9:
             flag = false;
             break;
     }
